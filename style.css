@@ -99,3 +99,54 @@ footer {
     font-size: 1.5rem;
   }
 }
+/* Banner pentru Home */
+header.banner {
+  background-image: url('camera-8k.jpg'); /* Calea către poza ta */
+  background-size: cover; /* Imaginea va umple întregul header */
+  background-position: center; /* Poziționează imaginea astfel încât centrul să fie vizibil */
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem; /* Adaugă puțin padding pentru a face secțiunea mai mare */
+  position: relative;
+  height: 100vh; /* Asigură că secțiunea de header ocupă întreg ecranul */
+}
+
+header.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay transparent pentru un efect mai bun */
+  z-index: 1;
+}
+
+header.banner .container {
+  position: relative;
+  z-index: 2;
+}
+/* Banner pentru Home - 728x90 */
+header.banner {
+  background-image: url('camera-8k.jpg'); /* Calea către poza ta */
+  background-size: cover; /* Imaginea va umple întregul header */
+  background-position: center; /* Poziționează imaginea astfel încât centrul să fie vizibil */
+  color: white;
+  text-align: center;
+  padding: 2rem 0; /* Adaugă puțin padding pentru a face secțiunea mai mare */
+  position: relative;
+  width: 2218px; /* Setează lățimea bannerului */
+  height: 200px; /* Setează înălțimea bannerului */
+  margin: 0 auto; /* Centrează bannerul pe pagină */
+}
+
+header.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay transparent pentru un efect mai bun */
+  z-index: 1;
+}
+
+header.banner .container {
+  position: relative;
+  z-index: 2;
+}
+

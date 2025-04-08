@@ -111,3 +111,56 @@ footer {
     font-size: 2rem;
   }
 }
+/* header nav */
+header nav {
+  background-color: #111;
+  padding: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav li {
+  margin: 0 1rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #00bcd4; /* schimbă culoarea când treci cu mouse-ul */
+}
+
+/* Portofoliu */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* Contacte */
+section#contact {
+  padding: 2rem;
+}
+
+section#contact h2 {
+  font-size: 2rem;
+}
+
+section#contact p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}

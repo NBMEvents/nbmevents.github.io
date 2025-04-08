@@ -1,3 +1,11 @@
+/* Resetează stilurile implicite ale browserului */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variabile de culoare */
 :root {
   --primary: #111;
   --accent: #00bcd4;
@@ -5,12 +13,7 @@
   --text: #333;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Stiluri pentru corpul paginii */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
@@ -18,210 +21,16 @@ body {
   line-height: 1.6;
 }
 
+/* Containerul general */
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
 }
 
-header {
-  background-image: url('camera-8k.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 6rem 2rem;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* overlay transparent */
-  z-index: 1;
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-section h2 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.services ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-
-.services li::before {
-  content: "🎥 ";
-  margin-right: 0.5rem;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.video-grid iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-/* header nav */
-header nav {
-  background-color: #111;
-  padding: 1rem;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-header nav li {
-  margin: 0 1rem;
-}
-
-header nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #00bcd4; /* schimbă culoarea când treci cu mouse-ul */
-}
-
-/* Portofoliu */
-.video-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.video-grid iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-}
-
-/* Contacte */
-section#contact {
-  padding: 2rem;
-}
-
-section#contact h2 {
-  font-size: 2rem;
-}
-
-section#contact p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-}
-header {
-  background-color: #00bcd4; /* culoare de fundal pentru header */
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-section.intro {
-  padding: 2rem;
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-section.contact, section.video-gallery {
-  padding: 2rem;
-  background-color: #fff;
-  color: #333;
-}
-
-.video-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.video-gallery iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-}
-
-.video-item {
-  margin-bottom: 2rem;
-}
-
-footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-a {
-  color: #00bcd4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-/* Stil pentru header-ul simplu */
+/* Header simplu fără imagine de fundal */
 header.simple-header {
-  background-color: #00bcd4; /* culoare de fundal pentru header */
+  background-color: var(--accent); /* Culoare de fundal pentru bara de sus */
   color: white;
   text-align: center;
   padding: 1rem 0;
@@ -232,14 +41,24 @@ header.simple-header h1 {
   font-size: 2rem;
 }
 
-/* Stil pentru secțiunea Contact */
+/* Stiluri pentru linkuri */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Secțiunea Contact */
 section.contact {
   padding: 2rem;
   background-color: #fff;
   color: #333;
 }
 
-/* Stil pentru secțiunea Portofoliu */
+/* Secțiunea Portofoliu */
 section.video-gallery {
   padding: 2rem;
   background-color: #fff;
@@ -262,18 +81,21 @@ section.video-gallery {
   margin-bottom: 2rem;
 }
 
+/* Stiluri pentru footer */
 footer {
-  background-color: #111;
+  background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 2rem;
 }
 
-a {
-  color: #00bcd4;
-  text-decoration: none;
-}
+/* Stiluri responsive pentru ecrane mici */
+@media (max-width: 768px) {
+  .video-gallery {
+    grid-template-columns: 1fr;
+  }
 
-a:hover {
-  text-decoration: underline;
+  header.simple-header h1 {
+    font-size: 1.5rem;
+  }
 }

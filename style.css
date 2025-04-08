@@ -1,29 +1,29 @@
 :root {
-    --primary: #111;
-    --accent: #00bcd4;
-    --bg: #f8f8f8;
-    --text: #333;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-  }
-  
+  --primary: #111;
+  --accent: #00bcd4;
+  --bg: #f8f8f8;
+  --text: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
 header {
   background-image: url('camera-8k.jpg');
   background-size: cover;
@@ -32,7 +32,7 @@ header {
   text-align: center;
   padding: 6rem 2rem;
   position: relative;
-  height: 100vh;
+  height: 100vh; /* asigură că secțiunea de header ocupă întreg ecranul */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ header::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* overlay întunecat */
+  background: rgba(0, 0, 0, 0.5); /* overlay transparent */
   z-index: 1;
 }
 
@@ -51,64 +51,64 @@ header .container {
   z-index: 2;
 }
 
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  section h2 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-  }
-  
-  .services ul {
-    list-style: none;
-    padding-left: 1rem;
-  }
-  
-  .services li::before {
-    content: "🎥 ";
-    margin-right: 0.5rem;
-  }
-  
+
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.services ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.services li::before {
+  content: "🎥 ";
+  margin-right: 0.5rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
   }
-  
-  .video-grid iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
+
+  h1 {
+    font-size: 2rem;
   }
-  
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .video-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    h1 {
-      font-size: 2rem;
-    }
-  }
-  
+}

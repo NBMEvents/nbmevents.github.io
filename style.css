@@ -219,3 +219,61 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* Stil pentru header-ul simplu */
+header.simple-header {
+  background-color: #00bcd4; /* culoare de fundal pentru header */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header.simple-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Stil pentru secțiunea Contact */
+section.contact {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Stil pentru secțiunea Portofoliu */
+section.video-gallery {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-gallery iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.video-item {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

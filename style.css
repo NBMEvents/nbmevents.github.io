@@ -164,3 +164,58 @@ section#contact p {
   font-size: 1.1rem;
   margin-top: 1rem;
 }
+header {
+  background-color: #00bcd4; /* culoare de fundal pentru header */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+section.intro {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+section.contact, section.video-gallery {
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.video-gallery iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.video-item {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

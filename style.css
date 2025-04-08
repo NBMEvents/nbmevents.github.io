@@ -25,8 +25,6 @@ body {
 }
 
 header {
-<<<<<<< HEAD
-header {
   background-image: url('camera-8k.jpg');
   background-size: cover;
   background-position: center;
@@ -53,32 +51,6 @@ header .container {
   z-index: 2;
 }
 
-
-=======
-header {
-  background-image: url('some-other-image.jpg');
-  background-size: cover;
-  background-position: top;
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
-header::after {
-content: '';
-position: absolute;
-inset: 0;
-background: rgba(0, 0, 0, 0.5); /* overlay întunecat */
-z-index: 1;
-}
-
-header .container {
-position: relative;
-z-index: 2;
-}
-
-
->>>>>>> 2d0d912 (Adăugat background image)
 h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
